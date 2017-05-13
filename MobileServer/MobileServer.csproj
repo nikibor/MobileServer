@@ -128,7 +128,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AddController.cs" />
+    <Compile Include="Controllers\BridgeController.cs" />
     <Compile Include="Controllers\DataController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Core\HttpProtocol.cs" />
     <Compile Include="Core\NeoTool.cs" />

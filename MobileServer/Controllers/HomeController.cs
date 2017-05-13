@@ -18,18 +18,18 @@ namespace MobileServer.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "root");
-            using (client)
-            {
-                client.Connect();
-            }
-            var a = NeoTool.IsExist(new VkUser() { uid = 80974023 });
-            var b = NeoTool.IsExist(new VkUser() {uid = 148266446 });
-            if (a && b)
-            {
-                var c = NeoTool.IsRelation(new VkUser() {uid = 80974023}, new VkUser() {uid = 148266446});
-                var d = NeoTool.IsRelation(new VkUser() {uid = 148266446}, new VkUser() {uid = 80974023});
-            }
+            //var client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "root");
+            //using (client)
+            //{
+            //    client.Connect();
+            //}
+            //var a = NeoTool.IsExist(new VkUser() { uid = 80974023 });
+            //var b = NeoTool.IsExist(new VkUser() {uid = 148266446 });
+            //if (a && b)
+            //{
+            //    var c = NeoTool.IsRelation(new VkUser() {uid = 80974023}, new VkUser() {uid = 148266446});
+            //    var d = NeoTool.IsRelation(new VkUser() {uid = 148266446}, new VkUser() {uid = 80974023});
+            //}
             return View();
         }
 

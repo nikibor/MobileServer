@@ -10,7 +10,7 @@ namespace MobileServer.Models
         public long vk_id { set; get; }
         public string name { set; get; }        
         public int sex { set; get; }
-        public int city_id { set; get; }        
+        public long city_id { set; get; }        
         public string photo { set; get; }
     }
 }

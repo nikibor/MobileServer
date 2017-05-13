@@ -74,7 +74,7 @@ namespace MobileServer.Core
             {
                 Client.Connect();
                 Client.Cypher
-                    .CreateUnique("(user:VkMobile {newUser})")
+                    .Create("(user:VkMobile {newUser})")
                     .WithParam("newUser", db_user)
                     .ExecuteWithoutResults();
             }
@@ -112,7 +112,7 @@ namespace MobileServer.Core
                 .Match("(x:VkMobile)","(y:VkMobile)")
                 .Where((NeoUser x) => x.vk_id == origin.uid)
                 .AndWhere((NeoUser y) => y.vk_id == target.uid)
-                .CreateUnique("x-[:FRIEND]->y")
+                .Create("(x)-[:FRIEND]->(y)")
                 .ExecuteWithoutResults();
             Client.Dispose();
         }
