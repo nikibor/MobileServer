@@ -1,0 +1,19 @@
+﻿@model MobileServer.ViewModels.VkCreateModel
+
+@{
+    ViewBag.Title = "VkSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>VkSearch</h2>
+
+    
+    @using (Html.BeginForm("VkSearch","Home"))
+    {
+        @Html.TextBoxFor(x => x.user_id, new { @class = "form-control", @placeholder = "Например: nik_borgolov" })
+        <input type="submit" class="btn btn-primary" value="Отправить" />
+        @Html.AntiForgeryToken()
+    }
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

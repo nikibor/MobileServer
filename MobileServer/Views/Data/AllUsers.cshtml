@@ -1,0 +1,50 @@
+﻿@model IEnumerable<MobileServer.Models.NeoUser>
+
+@{
+    ViewBag.Title = "AllUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AllUsers</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.vk_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city_id)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.photo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.vk_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city_id)
+        </td>        
+        <td>
+            <img src="@item.photo"/>            
+        </td>        
+    </tr>
+}
+
+</table>
