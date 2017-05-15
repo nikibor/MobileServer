@@ -24,7 +24,7 @@ namespace MobileServer.Controllers
         public ActionResult AddUser(VkCreateModel model)
         {
             string json = HttpProtocol.TakeData(
-                $"https://api.vk.com/method/users.get?user_ids={model.user_id}&fields=sex,city,photo_50&v=5.62", "GET",
+                $"https://api.vk.com/method/users.get?user_ids={model.user_id}&fields=sex,city,photo_50", "GET",
                 Encoding.UTF8);
             var person = JsonConvert.DeserializeObject<Response>(json);
             VkUser user =  person.response[0];
