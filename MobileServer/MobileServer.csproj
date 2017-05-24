@@ -132,7 +132,9 @@
     <Compile Include="Controllers\BridgeController.cs" />
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\GraphController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VisualisationController.cs" />
     <Compile Include="Core\HttpProtocol.cs" />
     <Compile Include="Core\NeoTool.cs" />
     <Compile Include="Global.asax.cs">
@@ -152,6 +154,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Visualisation\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

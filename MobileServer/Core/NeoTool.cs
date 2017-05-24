@@ -59,7 +59,24 @@ namespace MobileServer.Core
             }
             return false;
         }
+        
 
+        public static List<NeoUser> TakeFriends(long id)
+        {
+            Client.Connect();
+            var result = Client.Cypher
+                .Match("(x:VkMobile)-[:FRIEND]->(y)")
+                .Where((NeoUser x) => x.vk_id == id)
+                .Return((x, y) => new
+                {
+                    x = x.As<NeoUser>(),
+                    y = y.As<NeoUser>()
+                })
+                .Results;
+            Client.Dispose();
+            var s = result as List<NeoUser>;
+            return new List<NeoUser>();
+        }
         public static void CreateUser(VkUser user)
         {
             NeoUser db_user = new NeoUser()

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using MobileServer.Core;
 
 namespace MobileServer.Controllers
 {
@@ -12,6 +13,7 @@ namespace MobileServer.Controllers
         // GET: api/Default
         public IEnumerable<string> Get()
         {
+            var s = NeoTool.TakeFriends(148266446);
             return new string[] { "value1", "value2" };
         }
 

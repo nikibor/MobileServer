@@ -25,11 +25,9 @@ namespace MobileServer.Controllers
             //}
             //var a = NeoTool.IsExist(new VkUser() { uid = 80974023 });
             //var b = NeoTool.IsExist(new VkUser() {uid = 148266446 });
-            //if (a && b)
-            //{
-            //    var c = NeoTool.IsRelation(new VkUser() {uid = 80974023}, new VkUser() {uid = 148266446});
-            //    var d = NeoTool.IsRelation(new VkUser() {uid = 148266446}, new VkUser() {uid = 80974023});
-            //}
+
+            //var c = NeoTool.IsRelation(new VkUser() {uid = 80974023}, new VkUser() {uid = 148266446});
+            //var d = NeoTool.IsRelation(new VkUser() {uid = 148266446}, new VkUser() {uid = 80974023});
             return View();
         }
 
