@@ -10,7 +10,7 @@ namespace MobileServer.Core
     public class NeoTool
     {
         public static GraphClient Client { get; set; } =
-            new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "root");
+            new GraphClient(new Uri("http://127.0.0.1:7474/db/data"), "neo4j", "root");
 
         /// <summary>
         /// Проверка существования элемента в базе
