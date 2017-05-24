@@ -129,11 +129,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AddController.cs" />
     <Compile Include="Controllers\BridgeController.cs" />
+    <Compile Include="Controllers\ByNameController.cs" />
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\GraphController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\VisualisationController.cs" />
+    <Compile Include="Core\DataSafe.cs" />
     <Compile Include="Core\HttpProtocol.cs" />
     <Compile Include="Core\NeoTool.cs" />
     <Compile Include="Global.asax.cs">
@@ -142,6 +144,13 @@
     <Compile Include="Models\NeoUser.cs" />
     <Compile Include="Models\VkUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ByIdController.cs" />
+    <Compile Include="ViewModels\GraphById.cs" />
+    <Compile Include="ViewModels\GraphByName.cs" />
+    <Compile Include="ViewModels\GraphSettingsById.cs" />
+    <Compile Include="ViewModels\GraphSettingsByName.cs" />
+    <Compile Include="ViewModels\SettingsByIdController.cs" />
+    <Compile Include="ViewModels\SettingsByNameController.cs" />
     <Compile Include="ViewModels\VkCreateModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +163,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Visualisation\Index.cshtml" />
+    <Content Include="Views\Visualisation\ByName.cshtml" />
+    <Content Include="Views\Visualisation\ById.cshtml" />
+    <Content Include="Views\Visualisation\SettingsByName.cshtml" />
+    <Content Include="Views\Visualisation\SettingsById.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
