@@ -44,10 +44,10 @@
 <script src="http://d3js.org/d3.v3.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-    var width = 800, height = 800;
+    var width = 400, height = 300;
 
     var force = d3.layout.force()
-        .charge(-200).linkDistance(30).size([width, height]);
+        .charge(-100).linkDistance(50).size([width, height]);
 
     var svg = d3.select("#graph").append("svg")
         .attr("width", "100%").attr("height", "100%")

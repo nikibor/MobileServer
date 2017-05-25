@@ -17,7 +17,7 @@ namespace MobileServer.Controllers
     {
         [HttpGet]
         [Route("{limit:int?}", Name = "getgraph")]
-        public IHttpActionResult Index(int limit = 500)
+        public IHttpActionResult Index(int limit = 100)
         {
             NeoTool.Client.Connect();
             var query = NeoTool.Client.Cypher
